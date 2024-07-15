@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:cadetblue;
+    text-align: center;
+}
+
+/* IMP article on vh,vw,vmin,vmax -> https://www.sitepoint.com/css-viewport-units-quick-start/ */
+.container{
+    height: 70vh;  /*70% of viewport's height*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game{
+    height: 60vmin;  /*60% of smaller dimension of container*/
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 2vmin;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);  /*1 rem = Height equal to height of root element (generally 16px). So 1rem = 16px*/
+
+    font-size: 8vmin;  /*As box ht is 18vmin, keep font size as 8 vmin*/
+    background-color: rgba(255, 255, 0, 0.629);
+    /* color: brown; */
+}
+
+.colorO{
+    color:crimson;  /*Giving different color to O*/
+}
+.colorX{
+    color: darkslateblue;  /*Giving different color to X*/
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color:firebrick;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.msg-container{
+    height: 20vmin;
+}
+
+#msg{
+    color: rgb(255, 80, 80);
+    font-size: 5vmin;
+}
+
+#newGame{
+    margin-top: 2vmin;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color:firebrick;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.hide{
+    display: none;  /*Keeps msg-container hidden until winner is detected*/
+}
+
+
+.draw-msg-container{
+    height: 20vmin;
+}
+
+#draw-msg{
+    color: rgb(255, 80, 80);
+    font-size: 5vmin;
+}
